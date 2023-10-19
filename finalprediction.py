@@ -219,30 +219,7 @@ fig.tight_layout()
 
 plt.show()
 
-import matplotlib.pyplot as plt
 
-y = ['LightGBM', 'Ensemble']
-x = [accuracy * 100, ensemble_accuracy * 100]
-
-bar_width = 0.2
-
-fig, ax = plt.subplots()
-bars = ax.bar(y, x, width=bar_width, color='blue')
-
-plt.ylabel('Accuracy (%)')
-plt.xlabel('Model')
-plt.title('Difference between Classification Model')
-
-# Add percentage labels on the bars
-for bar in bars:
-    height = bar.get_height()
-    ax.annotate(f'{height:.2f}%',
-                xy=(bar.get_x() + bar.get_width() / 2, height),
-                xytext=(0, 2),  # 3 points vertical offset
-                textcoords="offset points",
-                ha='center', va='bottom')
-
-plt.show()
 
 import matplotlib.pyplot as plt
 
